@@ -1,0 +1,256 @@
+/* Root styles */
+:root {
+	--headingClr: #333;
+	--textClr: #555;
+	--headingLightClr: #ddd;
+	--textLightClr: #bbb;
+	--transition: all 0.2s ease;
+	--borderRadius: 5px;
+	--boxShadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+	--darkBgClr: #9b4444;
+	--lightBgClr: #eeeeee;
+	--accentBgClr: #c9c9c9;
+}
+/* Reset styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+img {
+	display: block;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	min-height: 100vh;
+}
+
+/* default button */
+.btn {
+	outline: none;
+	border: none;
+	cursor: pointer;
+	background-color: none;
+	border-radius: var(--borderRadius);
+	padding: 5px 15px;
+}
+
+/* default light text style */
+.text-light {
+	color: var(--textLightClr);
+	font-size: 16px;
+	text-wrap: balance;
+}
+
+/* header */
+.header {
+	padding: 10px 18%;
+	background-color: var(--darkBgClr);
+}
+
+/* navbar */
+.navigation {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* brand/title container */
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+/* links container */
+.links {
+	display: flex;
+	gap: 20px;
+}
+
+.links .link {
+	display: inline-block;
+	padding-bottom: 2px;
+	color: var(--textLightClr);
+	transition: var(--transition);
+}
+.links .link:hover {
+	color: #000;
+	border-bottom: 2px solid #000;
+	margin-bottom: -2px; /* to negate bottom border 2px */
+}
+
+/* hero container */
+.hero-section {
+	padding: 40px 18%;
+	background-color: var(--darkBgClr);
+	align-items: center;
+	display: flex;
+	gap: 20px;
+}
+
+.hero-text h1 {
+	font-size: 46px;
+	color: var(--headingLightClr);
+}
+
+.hero-text p {
+	font-size: 18px;
+}
+
+.hero-img {
+	flex-shrink: 0;
+	height: 225px;
+	width: 400px;
+}
+
+.hero-img img {
+	height: 100%;
+	width: 100%;
+	border-radius: var(--borderRadius);
+	box-shadow: var(--boxShadow);
+}
+
+.btn-hero {
+	margin-top: 15px;
+	background-color: var(--lightBgClr);
+	border: 1px solid var(--lightBgClr);
+	color: var(--headingClr);
+	transition: var(--transition);
+}
+
+.btn-hero:hover {
+	color: var(--headingLightClr);
+	background-color: var(--darkBgClr);
+}
+
+/* card container */
+.card-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+	background-color: var(--lightBgClr);
+	padding: 30px 20% 80px;
+}
+
+.card-title {
+	color: var(--headingClr);
+}
+
+.card-grid {
+	display: flex;
+	gap: 30px;
+	flex-wrap: wrap;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	flex: 1;
+}
+
+.card-img {
+	height: 150px;
+	width: 180px;
+	box-shadow: var(--boxShadow);
+	border-radius: var(--borderRadius);
+	border: 1px solid var(--accentBgClr);
+}
+
+.card-text {
+	font-size: 14px;
+	color: var(--textClr);
+	text-align: center;
+}
+
+/* quote  */
+.quote-container {
+	background-color: var(--accentBgClr);
+	padding: 80px 20%;
+}
+
+.quote-text {
+	color: var(--headingClr);
+	font-style: italic;
+	font-weight: 200;
+	font-size: 34px;
+}
+
+.quote-author {
+	display: block;
+	color: var(--textClr);
+	font-weight: 600;
+	font-size: 16px;
+	text-align: right;
+	margin-top: 15px;
+}
+
+/* sign-up */
+.signup-container {
+	padding: 80px 20%;
+	background-color: var(--lightBgClr);
+}
+
+.signup-box {
+	padding: 50px 60px;
+	background-color: #083535;
+	border-radius: var(--borderRadius);
+	box-shadow: var(--boxShadow);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.signup-title {
+	font-size: 20px;
+	color: var(--headingLightClr);
+}
+
+.btn-signup {
+	background-color: #083535;
+	border: 1px solid var(--lightBgClr);
+	color: var(--textLightClr);
+	transition: var(--transition);
+}
+.btn-signup:hover {
+	background-color: var(--lightBgClr);
+	color: #083535;
+}
+
+/* footer */
+footer {
+	background-color: var(--darkBgClr);
+	padding: 25px 0;
+	text-align: center;
+}
+
+footer p a {
+	color: var(--headingLightClr);
+	transition: var(--transition);
+}
+
+footer p a:hover {
+	color: #000;
+}
